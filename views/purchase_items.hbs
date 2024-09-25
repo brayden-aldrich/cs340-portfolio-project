@@ -1,0 +1,49 @@
+
+<script src="/main.js"></script>
+
+<h3>Insert</h3>
+<form method="POST" action="insert_purchase_items">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    <label>Purchase ID</label> <select name="purchase_id">
+        <option value=""></option>
+        {{#each fk.purchases}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+    </select>
+    <label>Item ID</label> <select name="item_id">
+        <option value=""></option>
+        {{#each fk.items}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+    </select>
+    <label for="quantity">Quantity</label><input type="text" name="quantity">
+    {{>buttons}}
+</form>
+
+<h3>Delete</h3>
+<form method="POST" action="delete_purchase_items">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    </select>
+    <label>Purchase and Item IDs</label> <select name="ids">
+        <option value=""></option>
+        {{#each fk.ids}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+    </select>
+    {{>buttons}}
+</form>
+
+<h3>Update</h3>
+<form method="POST" action="update_purchase_items">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    <label>Purchase and Item IDs</label> <select name="ids">
+        <option value=""></option>
+        {{#each fk.ids}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+    </select>
+    <label>Quantity</label><input name="quantity">
+    {{>buttons}}
+</form>
+
+{{>table}}

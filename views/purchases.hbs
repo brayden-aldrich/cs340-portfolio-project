@@ -1,0 +1,16 @@
+
+<h3>Insert</h3>
+<form method="POST" action="insert">
+    <input type="hidden" name="table" value="{{table}}"></input>
+        <label>Customer Name</label> <select name="customer_id">
+        <option value=""></option>
+        {{#each fk.customers}}
+        <option value="{{this.[0]}}">{{this.[1]}}</option>
+        {{/each}}
+    </select>
+    <label>Date-Time</label><input type="datetime-local" name="date_time">
+    {{>buttons}}
+</form>
+
+{{>delete}}
+{{>table}}

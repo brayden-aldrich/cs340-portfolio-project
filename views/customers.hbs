@@ -1,0 +1,11 @@
+
+<h3>Insert</h2>
+<form method="POST" action="insert">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    <label>Name</label> <input name="name">
+    <label>Email</label> <input name="email">
+    {{>buttons}}
+</form>
+
+{{>delete}}
+{{>table}}

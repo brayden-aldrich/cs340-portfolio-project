@@ -1,0 +1,16 @@
+
+<h3>Insert</h3>
+<form method="POST" action="insert">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    <label>Artist Name</label> <select name="artist_id">
+        <option value=""></option>
+        {{#each fk.artists}}
+        <option value="{{this.[0]}}">{{this.[1]}}</option>
+        {{/each}}
+    </select>
+    <label>Name</label><input name="name">
+    {{>buttons}}
+</form>
+
+{{>delete}}
+{{>table}}

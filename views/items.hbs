@@ -1,0 +1,35 @@
+
+<h3>Insert</h3>
+<form method="POST" action="insert">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    <label>Device</label><select name="device_id">
+        <option value=""></option>
+        {{#each fk.devices}}
+        <option value="{{this.[0]}}">Device: {{this.[1]}}</option>
+        {{/each}}
+    </select>
+    {{>buttons}}
+</form>
+<form method="POST" action="insert">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    <label>Song</label><select name="song_id">
+        <option value=""></option>
+        {{#each fk.songs}}
+        <option value="{{this.[0]}}">Song: {{this.[1]}}</option>
+        {{/each}}
+    </select>
+    {{>buttons}}
+</form>
+<form method="POST" action="insert">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    <label>Album</label><select name="album_id">
+        <option value=""></option>
+        {{#each fk.albums}}
+        <option value="{{this.[0]}}">Album: {{this.[1]}}</option>
+        {{/each}}
+    </select>
+    {{>buttons}}
+</form>
+
+{{>delete}}
+{{>table}}

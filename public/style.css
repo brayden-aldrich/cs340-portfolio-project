@@ -1,0 +1,32 @@
+
+body { background-color: lightblue; }
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+label { margin-right: 5px; }
+
+input, select, button { background-color: lightgray; margin-right: 20px; }
+
+form { margin-bottom: 10px; }
+
+ul { 
+    list-style-type: none; 
+    
+} 
+
+ul li { 
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    border-top: solid;
+}
+
+ul p { 
+    margin: 0px; 
+    padding: 20px;
+   
+}
+    

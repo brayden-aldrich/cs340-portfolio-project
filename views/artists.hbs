@@ -1,0 +1,35 @@
+
+<h3>Insert</h3>
+<form method="POST" action="insert">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    <label>Label Name</label> <select name="label_id">
+        <option value="NULL">NULL</option>
+        {{#each fk.labels}}
+        <option value="{{this.[0]}}">{{this.[1]}}</option>
+        {{/each}}
+    </select>
+    <label>Name</label> <input name="name">
+    {{>buttons}}
+</form>
+
+{{>delete}}
+
+<h3>Update</h3>
+<form method="POST" action="update_artists">
+    <input type="hidden" name="table" value="{{table}}"></input>
+    <label>ID</label> <select name="id">
+        <option value=""></option>
+        {{#each data}}
+        <option value="{{this.[0]}}">{{this.[0]}}</option>
+        {{/each}}
+    </select>
+    <label>Label Name</label> <select name="label_id">
+        <option value="null">NULL</option>
+        {{#each fk.labels}}
+        <option value="{{this.[0]}}">{{this.[1]}}</option>
+        {{/each}}
+    </select>
+    {{>buttons}}
+</form>
+
+{{>table}}
